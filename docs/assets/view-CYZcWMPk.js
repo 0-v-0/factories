@@ -1,4 +1,4 @@
-import{u as v,e as d}from"./__uno-D8LQNY-Y.js";import{A as b,m as y,B as c,C as x}from"./game-Br2KYx8o.js";const T=`uniform vec2 offset;
+import{u as v,e as d}from"./__uno-DeMoJ9bO.js";import{A as b,m as y,B as c,C as x}from"./game-DL8LDPfG.js";const T=`uniform vec2 offset;
 uniform int flags;
 uniform int selectedSlot;
 uniform sampler2D map;
