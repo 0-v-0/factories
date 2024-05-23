@@ -1,8 +1,8 @@
-<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>存档列表</title><link rel="icon" type="image/png" href="./icon.png">  <script type="module" src="./assets/__uno-DeMoJ9bO.js"></script>
-  <script type="module" src="./assets/DataFilter-cUnYGuqM.js"></script>
-  <script type="module" src="./assets/CPagination-B0mymP4W.js"></script>
-  <script type="module" src="./assets/CTable-ChbrZXMN.js"></script>
-  <script type="module" src="./assets/WorldList-DYGpzLh0.js"></script>
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>存档列表</title><link rel="icon" type="image/png" href="./icon.png">  <script type="module" src="./assets/__uno-x_vZtz2U.js"></script>
+  <script type="module" src="./assets/DataFilter-VWg2urFo.js"></script>
+  <script type="module" src="./assets/CPagination-BnMcCCKq.js"></script>
+  <script type="module" src="./assets/CTable-DWGVAplU.js"></script>
+  <script type="module" src="./assets/WorldList-DvXmGn00.js"></script>
   <link rel="stylesheet" href="./assets/__uno-Bt_xnz-9.css">
 </head><body><div class="p-8"><h1>Factories</h1><h2>存档列表</h2><world-list col-keys="name,mode,created,updated"
 	col-names=",名称,模式,创建时间,更新时间,操作"><div class="overflow-x-auto"><div class="text-info" c-show="items.length">点击存档名称以开始游戏</div><data-filter ref="filter"></data-filter><table class="table table-zebra table-select"><thead><tr><th><label><input type="checkbox" c-model="selectAll">全选</label></th><template c-for="col; columns"><th>&#36;{col}</th></template></tr></thead><tbody><template c-for="item, i; items"><tr class="hover"><td><input type="checkbox" c-model="item.selected"></td><td @click="load(item)">$item.name</td><td>&#36;{item.mode?'挑战模式':'创造模式'}</td><td>&#36;{time(item.created)}</td><td>&#36;{time(item.updated)}</td><td><button class="btn btn-neutral" @click="modify(item)">修改</button></td></tr></template></tbody></table><c-pagination class="flex" ref="page"></c-pagination></div><button class="btn btn-accent btn-lg" @click="create">新游戏</button><button class="btn btn-error btn-lg" @click="del" c-show="selectedCount">删除选中</button><button class="btn btn-error btn-lg" @click="delAll">删除全部</button><div class="p-4">浏览器信息&#36;{navigator.userAgent}</div></world-list></div><dialog class="modal" is="world-settings"><div class="modal-box" style="height:100%"><h2>世界设置</h2><div class="max-w-xs"><div class="form-control"><label class="label"><span class="label-text">存档名称</span></label><input class="input input-bordered input-accent" 
